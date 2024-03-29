@@ -2,19 +2,17 @@ import express from "express";
 import dotenv from 'dotenv';
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import ErrorHandler from "./utils/ErrorHandler.js";
+import cors from  "cors";
+import ErrorHandler from "./middlewares/error.js";
 const app = express();
 
 app.use(express.json()); // to support JSON-encoded
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
 
 //config
-if(process.env.NODE_ENV !== "PRODUCTION"){
-    dotenv.config({
-        path:"./config/.env"
-    })
-}
+dotenv.config()
 
 
 app.use(ErrorHandler)

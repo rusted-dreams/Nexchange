@@ -1,9 +1,9 @@
 import express from 'express';
-import { createAccount } from '../controllers/userController.js';
-import { activateUser } from '../controllers/userController.js';
+import * as user from '../controllers/userController.js';
+
 const router = express.Router();
 
 router.route('/create-account')
-    .post(createAccount);
+    .post(user.createAccount);
 
 export default router;

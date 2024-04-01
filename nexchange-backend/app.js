@@ -14,6 +14,13 @@ app.use(cors());
 //config
 dotenv.config()
 
+//import routes
+import userRouter from './routes/userRoutes.js';
+
+
+app.use('/api/v1/user',  userRouter);
+
+
 
 app.use(ErrorHandler)
 export default app;

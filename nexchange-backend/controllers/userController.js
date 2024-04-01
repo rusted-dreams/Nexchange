@@ -1,21 +1,12 @@
-import express from "express";
-import { Path } from "path ";
-import { Router } from "express";
-
-const router = express.Router();
-import User from '../model/user.js'
+import User from '../model/user.js';
 import ErrorHandler from "../utils/ErrorHandler.js";
 
 //config
-if(process.env.NODE_ENV !== "PRODUCTION"){
-  dotenv.config({
-      path:"./config/.env"
-  })
-}
+dotenv.config()
 
 
 // create user
-router.post("/create-user", async (req, res, next) => {
+export const createAccount = async (req, res, next) => {
     try {
       const { name, email, password } = req.body;
       const userEmail = await User.findOne({ email });
@@ -54,7 +45,7 @@ router.post("/create-user", async (req, res, next) => {
     } catch (error) {
       return next(new ErrorHandler(error.message, 400));
     }
-  });
+  };
   
 
 // create activation token
@@ -66,9 +57,7 @@ const createActivationToken = (user) => {
 
 
 // activate user
-router.post(
-  "/activation",
-  catchAsyncErrors(async (req, res, next) => {
+export const activateUser = catchAsyncErrors(async (req, res, next) => {
     try {
       const { activation_token } = req.body;
 
@@ -98,4 +87,4 @@ router.post(
       return next(new ErrorHandler(error.message, 500));
     }
   })
-);
+;

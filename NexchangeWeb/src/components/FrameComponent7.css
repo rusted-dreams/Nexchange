@@ -1,0 +1,98 @@
+.featured-items1 {
+  margin: 0;
+  align-self: stretch;
+  height: 131px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  white-space: nowrap;
+}
+.featured-items-wrapper {
+  width: 762px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 57px 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.logoseapw-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buy {
+  position: absolute;
+  top: 37px;
+  left: 123px;
+  display: inline-block;
+  min-width: 122px;
+  z-index: 1;
+}
+.logoseapw-parent {
+  height: 156px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.frame-child48 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rent {
+  position: absolute;
+  top: 31px;
+  left: 110px;
+  z-index: 1;
+}
+.ellipse-parent1 {
+  align-self: stretch;
+  height: 156px;
+  position: relative;
+}
+.frame-header,
+.frame-parent29,
+.frame-wrapper14 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-wrapper14 {
+  flex: 1;
+  flex-direction: column;
+  padding: 6px 0 0;
+  box-sizing: border-box;
+}
+.frame-header,
+.frame-parent29 {
+  width: 844px;
+  flex-direction: row;
+  gap: 110px;
+  font-size: 68px;
+  color: #fff;
+}
+.frame-header {
+  position: absolute;
+  top: 77px;
+  left: 140px;
+  width: 4562px;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  font-size: 108px;
+  color: #000;
+  font-family: Inter;
+}

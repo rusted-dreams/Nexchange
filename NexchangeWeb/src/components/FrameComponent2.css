@@ -1,0 +1,104 @@
+.nexchange1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  white-space: nowrap;
+  z-index: 1;
+}
+.frame-button {
+  align-self: stretch;
+  height: 42px;
+  z-index: 1;
+}
+.frame-wrapper7 {
+  width: 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 8px;
+  box-sizing: border-box;
+}
+.frame-child32 {
+  height: 42px;
+  width: 103px;
+  position: relative;
+  background-color: #000;
+  display: none;
+}
+.signup {
+  position: relative;
+  display: inline-block;
+  min-width: 74px;
+  z-index: 2;
+}
+.rectangle-parent19 {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5px 14px 10px 15px;
+  z-index: 1;
+}
+.frame-wrapper8 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 15px 9px 0;
+}
+.frame-child33 {
+  height: 60px;
+  width: 58px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.frame-parent23,
+.frame-wrapper6 {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.frame-parent23 {
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 19px;
+}
+.frame-wrapper6 {
+  width: 313px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 9px 0 0;
+  box-sizing: border-box;
+  font-size: 22px;
+  color: #fff;
+}
+.landing-page-inner,
+.nexchange-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.nexchange-parent {
+  width: 1451px;
+  justify-content: space-between;
+  gap: 20px;
+}
+.landing-page-inner {
+  height: 69px;
+  justify-content: flex-start;
+  padding: 0 39px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 48px;
+  color: #000;
+  font-family: Inter;
+}

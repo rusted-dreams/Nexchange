@@ -1,0 +1,114 @@
+.categories-container {
+  height: 100%;
+  width: 7724px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  bottom: 0;
+  left: -326px;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.profile {
+  margin: 0;
+  width: 375px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.all-categories-title {
+  width: 2171px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.my-listings-my {
+  align-self: stretch;
+  position: relative;
+  font-weight: 300;
+  white-space: pre-wrap;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tech-gadgets-category {
+  width: 4280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 72px 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 88px;
+}
+.manage-listings-button-child {
+  height: 168px;
+  width: 507px;
+  position: relative;
+  background-color: #fff;
+  display: none;
+  max-width: 100%;
+}
+.edit-profile {
+  position: relative;
+  font-weight: 300;
+  white-space: nowrap;
+  z-index: 2;
+}
+.manage-listings-button {
+  align-self: stretch;
+  flex: 1;
+  background-color: #fff;
+  flex-direction: row;
+  padding: 35px 71px;
+  z-index: 1;
+}
+.accessories-category,
+.manage-listings-button,
+.search-bar1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.accessories-category {
+  height: 197px;
+  width: 507px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 29px 0 0;
+  font-size: 68px;
+}
+.search-bar1 {
+  width: 7398px;
+  overflow-x: auto;
+  flex-direction: row;
+  padding: 94px 158px 41px;
+  position: relative;
+  gap: 25px;
+  text-align: left;
+  font-size: 120px;
+  color: #000;
+  font-family: Inter;
+}
+@media screen and (max-width: 2250px) {
+  .manage-listings-button,
+  .search-bar1 {
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
+  }
+  .search-bar1 {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}

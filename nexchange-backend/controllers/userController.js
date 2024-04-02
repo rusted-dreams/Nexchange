@@ -1,19 +1,22 @@
 import User from '../model/user.js';
 import ErrorHandler from "../utils/ErrorHandler.js";
 import { catchAsyncErrors } from '../middlewares/catchAsyncErrors.js';
+import sendMail from '../utils/sendMail.js';
+import jwt from  'jsonwebtoken';
 
 
 // create user
 export const createAccount = async (req, res, next) => {
     try {
       const { name, email, password } = req.body;
+      // console.log(name);
       const userEmail = await User.findOne({ email });
   
       if (userEmail) {  
         return next(new ErrorHandler("User already exists", 400));
       }
 
-      if (!userEmail.toLowerCase().endsWith('@bennett.edu.in')){
+      if (!userEmail && !email.toLowerCase().endsWith('@bennett.edu.in')){
         return next(new ErrorHandler("invalid bennett id!", 400));
       }
   

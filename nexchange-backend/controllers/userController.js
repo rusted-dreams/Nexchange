@@ -45,7 +45,7 @@ export const createAccount = async (req, res, next) => {
     }
   };
   
-
+ 
 // create activation token
 const createActivationToken = (user) => {
   return jwt.sign(user, process.env.ACTIVATION_SECRET, {

@@ -9,5 +9,5 @@ router.route('/create-account')
 router.route('/activate-user')
     .post(user.activateUser);
 
-    
+
 export default router;

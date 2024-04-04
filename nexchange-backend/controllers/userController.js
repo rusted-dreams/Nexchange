@@ -3,6 +3,8 @@ import ErrorHandler from "../utils/ErrorHandler.js";
 import { catchAsyncErrors } from '../middlewares/catchAsyncErrors.js';
 import sendMail from '../utils/sendMail.js';
 import jwt from  'jsonwebtoken';
+import sendToken from '../utils/jwtToken.js';
+import bcrypt from 'bcrypt'
 
 
 // create user

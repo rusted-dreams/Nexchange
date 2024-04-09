@@ -4,7 +4,6 @@ import { catchAsyncErrors } from '../middlewares/catchAsyncErrors.js';
 import sendMail from '../utils/sendMail.js';
 import jwt from  'jsonwebtoken';
 import sendToken from '../utils/jwtToken.js';
-import bcrypt from 'bcrypt'
 
 
 // create user
@@ -95,9 +94,9 @@ export const activateUser = catchAsyncErrors(async (req, res, next) => {
   export const login = catchAsyncErrors(async (req, res, next) => {
     try {
       const { email, password } = req.body;
-
+      // console.log(email + " " + password);
       if (!email || !password) {
-        return next(new ErrorHandler("Please provide the all fields!", 400));
+        return next(new ErrorHandler("Please provide all the fields!", 400));
       }
 
       const user = await User.findOne({ email }).select("+password");
@@ -110,7 +109,7 @@ export const activateUser = catchAsyncErrors(async (req, res, next) => {
 
       if (!isPasswordValid) {
         return next(
-          new ErrorHandler("Please provide the correct information", 400)
+          new ErrorHandler("invalid password", 400)
         );
       }
 
@@ -126,7 +125,7 @@ export const loadUser = catchAsyncErrors(async (req, res, next) => {
     const user = await User.findById(req.user.id);
 
     if (!user) {
-      return next(new ErrorHandler("User doesn't exists", 400));
+      return next(new ErrorHandler("User doesn't exist", 400));
     }
 
     res.status(200).json({

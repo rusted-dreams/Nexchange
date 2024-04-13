@@ -29,7 +29,7 @@ export const createAccount = async (req, res, next) => {
   
       const activationToken = createActivationToken(user);
   
-      const activationUrl = `https://localhost:${process.env.PORT}/${activationToken}`;
+      const activationUrl = `http://localhost:${process.env.FRONT_END_PORT}/activation/${activationToken}`;
   
       try {
         await sendMail({

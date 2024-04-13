@@ -1,1 +1,6 @@
-import Login from "../src/pages/Login.jsx"
+import LoginPage from './pages/LoginPage.jsx';
+
+
+export {
+    LoginPage,
+}

@@ -11,6 +11,13 @@ import {server} from './server.js'
 
 
 const App = () => {
+  useEffect(()=>{
+    axios.get(`${server}/user/getuser`, {withCredentials: true}).then((res) => {
+      console.log(res.data);
+    }).catch((err) => {
+      toast.error(err.response.data.message);
+    });
+    },[]);
 
   return (
     <Router>

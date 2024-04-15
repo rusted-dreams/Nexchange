@@ -96,7 +96,7 @@ export const activateUser = catchAsyncErrors(async (req, res, next) => {
       const { email, password } = req.body;
       // console.log(email + " " + password);
       if (!email || !password) {
-        return next(new ErrorHandler("Please provide all the fields!", 400));
+        return next(new ErrorHandler("Please provide all fields!", 400));
       }
 
       const user = await User.findOne({ email }).select("+password");

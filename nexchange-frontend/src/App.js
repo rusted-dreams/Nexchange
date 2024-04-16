@@ -6,18 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { LoginPage, SignupPage, ActivationPage } from './Routes.js';
 import axios from 'axios';
 import {server} from './server.js'
-// import Store from "./redux/store";
-// import { loadSeller, loadUser } from "./redux/actions/user";
+import Store from "./redux/store";
+import { loadSeller, loadUser } from "./redux/actions/user";
 
 
 const App = () => {
   useEffect(()=>{
-    axios.get(`${server}/user/getuser`, {withCredentials: true}).then((res) => {
-      console.log(res.data);
-    }).catch((err) => {
-      toast.error(err.response.data.message);
-    });
-    },[]);
+    Store.dispatch(loadUser());
+  }, {});
 
   return (
     <Router>
